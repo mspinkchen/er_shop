@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>EnjoyRice後台</h1>
+
+  <nav class="nav nav-pills nav-fill">
+      <%= link_to "Product", admin_products_path, class: "nav-item nav-link active" %>
+      <%#= link_to "News", admin_bulletins_path, class: "nav-item nav-link"  %>
+       <%#= link_to "Blog", admin_blogs_path, class: "nav-item nav-link"  %> 
+  </nav>
+  <br>
+
+  <div>
+    <%= link_to "Add Product", new_admin_product_path, class: "btn btn-info" %>
+  </div>
+  <br>
+
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Name</th>
+        <th scope="col">En_Name</th>
+        <th scope="col">flavor</th>
+        <th scope="col">price</th>
+        <th scope="col">Description</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Show</th>
+        <th scope="col">Delete<th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+      <tr>
+        <th scope="row"><%=product.id%></th>
+        <td>
+          <%# if product.photos.present? %>
+            <%#= image_tag(product.photos[0].avatar.small.url, class: "thumbnail") %>
+          <%# else %>
+            <%#= image_tag("http://placehold.it/80x80&text=No Pic", class: "thumbnail") %>
+          <%# end %>
+        </td>
+
+        <td><%= product.name %></td>
+        <td><%= product.en_name %></td>
+        <td><%= product.flavor %></td>
+        <td>$<%= product.price %></td>
+        <td><%= truncate(product.description, length:20) %></td>
+        <td><%= link_to 'Edit', edit_admin_product_path(product) %></td>
+        <td><%= link_to 'Show', admin_product_path(product) %></td>
+        <td><%= link_to 'Delete', admin_product_path(product), method: :delete, data: {confirm:"Are you sure?"} %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+</div>

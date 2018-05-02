@@ -1,0 +1,19 @@
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col">
+    <h2>Avatar</h2>
+    <%# if @product.photos.present? %>
+      <%#= image_tag(@product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+    <%# end %>
+
+  </div>
+  <div class="col">
+  <li><%= @product.name %></li>
+  <li><%= @product.en_name %></li>
+  <li><%= @product.flavor %></li>
+  <li>$<%= @product.price %></li>
+  <li><%= @product.description %></li>
+  </div>
+  </div>
+</div>
