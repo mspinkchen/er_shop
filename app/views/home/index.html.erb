@@ -1,1 +1,87 @@
-HOME
+<!-- home background -->
+<section id = "content">
+  <div class="menu-bg top_bg">
+    <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/index-lg.jpg" alt="玩飯餐盒" class="img-fluid d-none d-md-block">
+    <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/index-sm.jpg" alt="玩飯餐盒" class="img-fluid d-block d-md-none">
+    <div class="overlay"></div>
+    <div class="toptitle">
+      <div class="quotes-inner">
+        <h5 class="font-weight-light mb-1"> &quot;幸福、美好、無負擔的日常飲食&quot;</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <!-- bulletin -->
+  <div class="row justify-content-center">
+    
+    <div class="index-bulletin d-flex col-md-8 col-10 mt-5 p-2">
+    <%= link_to bulletins_path, class:"link-n" do %> 
+      <%#= render partial: "bulletins/first" %>
+      <% end %>
+    </div>
+    
+  </div>
+</div>
+
+  <!-- about -->
+  <section id="about">
+    <div class="index-title my-5">
+      <hr><span class="index-span">關於我們</span>
+    </div>
+    <div class="quote-bg">
+      <img src="  https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/index-lg-2.jpg" alt="會議餐盒" class="img-fluid d-none d-md-block">
+      <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/index-sm-2.jpg" alt="會議餐盒" class="img-fluid d-md-none">
+      <div class="overlay"></div>
+      <div class="quotes">
+        <div class="quotes-inner">
+        <h5>“我們想給你真的食物”</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- menu -->
+  <section id="menu">
+    <div class="index-title my-5">
+      <hr><span class="index-span">商務餐盒</span>
+    </div>
+    
+    <div class="container">
+      <div class="menu-col">
+      <div class="row justify-content-center">
+       <%= render partial: "menu" %>
+      </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- reserve -->
+  <section class="reserve py-2">
+    <div class="index-title my-5">
+      <hr><span class="index-span">預定提醒</span>
+    </div>
+    <div class="reserve-content">
+      <div class="gray-bg">
+        <div class="container">
+          <ul class="reserve-inner">
+            <li>訂餐方式:目前僅提供Line預定(ID:@kuo1137i)</li>
+            <li>提前預訂:因餐點製備時間較長，請於1~3天前預訂</li>
+            <li>外送服務:板橋、新莊五個以上、大台北地區3500以上免費外送</li>
+            <li>預定餐盒1~4個僅提供自取</li>
+            <li>週末、晚餐如需大量訂購請私訊我們</li>
+          </ul>
+        </div>
+        <div class="d-flex justify-content-center btn-group">
+          <button class="display-n btn-mb mx-4 px-4">訂購Q&#38;A</button>
+          <div><%= link_to'外送範圍', contacts_delivery_path, class:"btn-mb mx-4 px-4 er-link" %></div>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+  <!-- blog -->
+
+</div>
