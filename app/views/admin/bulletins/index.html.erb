@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>EnjoyRice後台</h1>
+
+  <nav class="nav nav-pills nav-fill">
+      <%= link_to "Product", admin_products_path, class: "nav-item nav-link"  %>
+      <%= link_to "Bulletins", admin_bulletins_path, class: "nav-item nav-link active"  %>
+      <%#= link_to "Blog", admin_blogs_path, class: "nav-item nav-link"  %>
+      <%= link_to "Contact", admin_contacts_path, class: "nav-item nav-link" %> 
+  </nav>
+  <br>
+
+  <div>
+    <%= link_to "Add New Bulletin", new_admin_bulletin_path, class: "btn btn-info" %>
+    <%= link_to "Categories", admin_categories_path, class: "btn btn-info" %>
+  </div>
+  <br>
+
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Title</th>
+        <th scope="col">date</th>
+        <th scope="col">tag</th>
+        <th scope="col">body</th>
+        <th scope="col">author</th>
+        <th scope="col">category</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @bulletins.each do |bulletin| %>
+      <tr>
+        <th scope="row"><%=bulletin.id%></th>
+        <td>
+          <%= image_tag bulletin.picture.url(:small) unless bulletin.picture.blank? %>
+          </td>
+        <td><%= bulletin.title %></td>
+        <td><%= bulletin.created_at.strftime("%Y-%m-%d") %></td>
+        <td><%= bulletin.tag %></td>
+        <td><%= bulletin.body %></td>
+        <td><%= bulletin.author %></td>
+        <td><%= bulletin.category.name if bulletin.category %></td>
+        <td><%= link_to 'Edit', edit_admin_bulletin_path(bulletin) %></td>
+        <td><%= link_to 'Delete', admin_bulletin_path(bulletin), method: :delete, data: {confirm:"Are you sure?"} %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class = "text-center">
+    <%= paginate @bulletins %>
+  </div>
+
+
+</div>
