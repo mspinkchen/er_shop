@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>EnjoyRice後台</h1>
+
+  <nav class="nav nav-pills nav-fill">
+      <%= link_to "Product", admin_products_path, class: "nav-item nav-link"  %>
+      <%= link_to "Bulletins", admin_bulletins_path, class: "nav-item nav-link"  %>
+      <%#= link_to "Blog", admin_blogs_path, class: "nav-item nav-link "  %> 
+      <%= link_to "Contact", admin_contacts_path, class: "nav-item nav-link active"  %>
+  </nav>
+  <br>
+
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Message</th>
+        <th scope="col">Delete</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @contacts.each do |contact| %>
+      <tr>
+        <th scope="row"><%=contact.id%></th>
+        <td><%= contact.name %></td>
+        <td><%= contact.phone %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.message %></td>
+        <td><%= link_to 'Delete', admin_contact_path(contact), method: :delete, data: {confirm:"Are you sure?"} %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+</div>
