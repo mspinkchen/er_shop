@@ -1,0 +1,48 @@
+  <div class="contact-bg top_bg">
+    <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/topbanner-4-lg.jpg" alt="玩飯餐盒" class="img-fluid d-none d-md-block">
+    <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/topbanner-4-sm.jpg" alt="玩飯餐盒" class="img-fluid d-block d-md-none">
+    <div class="overlay"></div>
+    <div class="toptitle-c">
+      <div class="quotes-inner">
+        <h3 class="mb-1">contact</h3>
+      </div>
+    </div>
+  </div>
+
+    <div class="row contact-toptitle mt-4">
+    <ol class="contact-title col-12 d-flex justify-content-center pr-md-3 pr-0">
+      <li class="front-title"><%= link_to '外送範圍', home_delivery_path, class:"gray-text" %></li>
+      <li>聯絡我們</li>
+    </ol>
+  </div>
+
+  <h3 class="text-center my-4">contact</h3>
+
+  <!-- form -->
+<div class = "container col-md-8">
+  
+  <%= simple_form_for @contact do |f| %>
+    <div class = "form-group">
+      <%= f.input :name, placeholder: "姓名 Input your name", class: "form-control" %>
+    </div>
+
+    <div class = "form-group">
+      <%= f.input :phone, placeholder:"手機 Input your phone number", error: '您的手機號碼須為10個數字', class: "form-control" %>
+    </div>
+
+    <div class = "form-group">
+    <%= f.input :email, placeholder:"電子信箱 Email", error:'您的email格式不正確', class: "form-control" %>
+    </div>
+
+    <div class = "form-group">
+    <%= f.input :message, placeholder:"留下你的建議 Write the messages", class: "form-control form-pb" %>
+    </div>
+
+    <div class ="btngroup">
+    <%= f.submit '送出', class:"btn-b" %>
+    </div>
+
+  <% end %>
+
+
+</div>
