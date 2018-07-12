@@ -8,7 +8,7 @@
   </ul>
   <% end %>
 
-  <div>
+  <div class="pt-5 mt-5">
     <%= form_for [:admin, @product] do |f| %>
     <div class="form-group">
       <%= f.label :name, 'Name' %>
@@ -37,8 +37,8 @@
 
 
     <div class="form-group">
-      <%#= f.label :avatar, "Photo" %>
-      <%#= f.file_field :avatar, multiple: true, name: "photos[avatar][]" %>
+      <%= f.label :avatar, "Photo" %>
+      <%= f.file_field :avatar, multiple: true, name: "photos[avatar][]" %>
     </div>
 
     <div>

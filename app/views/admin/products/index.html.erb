@@ -3,8 +3,9 @@
 
   <nav class="nav nav-pills nav-fill">
       <%= link_to "Product", admin_products_path, class: "nav-item nav-link active" %>
-      <%#= link_to "News", admin_bulletins_path, class: "nav-item nav-link"  %>
-       <%#= link_to "Blog", admin_blogs_path, class: "nav-item nav-link"  %> 
+      <%= link_to "Bulletins", admin_bulletins_path, class: "nav-item nav-link"  %>
+      <%#= link_to "Blog", admin_blogs_path, class: "nav-item nav-link"  %> 
+      <%= link_to "Contact", admin_contacts_path, class: "nav-item nav-link" %>
   </nav>
   <br>
 
@@ -33,11 +34,11 @@
       <tr>
         <th scope="row"><%=product.id%></th>
         <td>
-          <%# if product.photos.present? %>
-            <%#= image_tag(product.photos[0].avatar.small.url, class: "thumbnail") %>
-          <%# else %>
-            <%#= image_tag("http://placehold.it/80x80&text=No Pic", class: "thumbnail") %>
-          <%# end %>
+          <% if product.photos.present? %>
+            <%= image_tag(product.photos[0].avatar.small.url, class: "thumbnail") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/80x80&text=No Pic", class: "thumbnail") %>
+          <% end %>
         </td>
 
         <td><%= product.name %></td>
@@ -46,7 +47,7 @@
         <td>$<%= product.price %></td>
         <td><%= truncate(product.description, length:20) %></td>
         <td><%= link_to 'Edit', edit_admin_product_path(product) %></td>
-        <td><%= link_to 'Show', admin_product_path(product) %></td>
+        <td><%= link_to 'Show', product_path(product) %></td>
         <td><%= link_to 'Delete', admin_product_path(product), method: :delete, data: {confirm:"Are you sure?"} %></td>
       </tr>
       <% end %>
