@@ -14,15 +14,14 @@
 
 <div class="container">
   <!-- bulletin -->
-  <div class="row justify-content-center">
-    
-    <div class="index-bulletin d-flex col-md-8 col-10 mt-5 p-2">
-    <%= link_to bulletins_path, class:"link-n" do %> 
-      <%= render partial: "bulletins/first" %>
-      <% end %>
+  <%= link_to bulletins_path, class:"link-n" do %> 
+    <div class="row justify-content-center">
+      <div class="index-bulletin d-flex col-md-8 col-10 mt-5 p-2">
+        <%= render partial: "bulletins/first" %>
+      </div>     
     </div>
-    
-  </div>
+  <% end %>
+  
 </div>
 
   <!-- about -->
@@ -75,7 +74,7 @@
           </ul>
         </div>
         <div class="d-flex justify-content-center btn-group">
-          <button class="display-n btn-mb mx-4 px-4">訂購Q&#38;A</button>
+          <a href="https://line.me/R/ti/p/%40kuo1137i" class= "text-center btn-mb mx-4 px-4 er-link" target="_blank">線上預訂</a>
           <div><%= link_to'外送範圍', home_delivery_path, class:"btn-mb mx-4 px-4 er-link" %></div>
         </div>
       </div>

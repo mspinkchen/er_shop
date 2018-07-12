@@ -278,15 +278,30 @@ nav li a:hover {
   margin-top: 35px;
 }
 
-.box:hover{
-  box-shadow:0 3px 5px rgba(28,27,26,0.3);
-}
 
 .menu-content p{
   letter-spacing: 1px;
   line-height: 23px;
 }
 
+.menu-imgtitle{
+  position: absolute;
+  right: 25%;
+  left: 25%;
+  top: 70%;
+  text-align: center;
+  z-index: 10;
+  width: auto;
+  opacity: 0.85;
+
+}
+
+.menu-imgtitle p{
+  line-height: 28px;
+  background-color: #fdfdfd;
+  letter-spacing: 1.5px;
+  border-radius: 2px;
+}
 
 /*============= 04.banner =============*/
 
@@ -384,6 +399,8 @@ nav li a:hover {
   line-height: 30px;
   padding: 5px;
 }
+
+
 
 /*============= 05.contact =============*/
 

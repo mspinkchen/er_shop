@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
       flash[:notice] = "Message was successfully created 訊息傳送成功"
       redirect_to contacts_path
     else
-      flash.now[:alert] = "Message was failed created 訊息未傳送成功"
+      flash.now[:alert] = "Message was failed created 請重新檢查欄位"
       render :index
     end
   end

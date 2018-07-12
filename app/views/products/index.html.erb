@@ -9,20 +9,38 @@
     </div>
   </div>
 
-  
-  
-  <div class="container">
+  <div class="container mt-5">
+
+  <div class="row justify-content-center">
+    <div class="col-5 col-md-3 top_bg">
+      <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/about-9.jpg" alt="玩飯餐盒" class="img-fluid ">
+      <div class="menu-imgtitle"><p>紅藜麥飯</p></div>
+    </div>
+    <div class="col-5 col-md-3 top_bg">
+      <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/about-8.jpg" alt="玩飯餐盒" class="img-fluid ">
+      <div class="menu-imgtitle"><p>手作配菜</p></div>
+    </div>
+    <div class="col-5 col-md-3 top_bg">
+      <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/about-7.jpg" alt="玩飯餐盒" class="img-fluid ">
+      <div class="menu-imgtitle"><p>慢熟主菜</p></div>
+    </div>
+    <div class="col-5 col-md-3 top_bg ">
+      <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/about-6.jpg" alt="玩飯餐盒" class="img-fluid ">
+      <div class="menu-imgtitle"><p>自製沾醬</p></div>
+    </div>
+  </div>
+
     <div class="index-title my-5">
       <hr><span class="index-span">會議餐盒</span>
     </div>
 
   <!-- menu column --> 
   <div class="menu-col">
-        <div class="row justify-content-center">  
+    <div class="row d-flex justify-content-center">  
       <% @products.each do |product| %>  
-             
-        <div class="col-5">
-          <div class="box px-0 mb-5">
+            
+        <div class="col-md-6 col-10">
+          <div class="box px-0">
             <div class="menu-img">
               <% if product.photos.present? %>
                 <%= image_tag(product.photos[0].avatar.url, class: "img-fluid") %>
@@ -30,17 +48,13 @@
                 <%= image_tag("http://placehold.it/300x200&text=No Pic", class: "img-fluid") %>
               <% end %>
             </div>
-   
-            <div class="menu-content text-center">
-               <p class="er-font-18 menu-title mt-2 mb-1"><%= product.name %></p>
-            </div>
           </div>
         </div>   
       
-          <div class="col">
-            <div class="mt-2 menu-page-right">
+          <div class="col-md-6 col-10 px-3 mt-3">
+            <div class="menu-page-right">
               <div class="menu-page-top">
-                <h3 class="d-inline mr-2"><%= product.name %></h3>
+                <h5 class="d-inline mr-2"><%= product.name %></h5>
                 <div class="er-font-14 d-inline px-1 pink-bg"><%= product.flavor %></div>
                 <div class="er-font-14"><%= product.en_name %></div>
                 <div class="er-font-14">$<%= product.price %></div>
@@ -52,12 +66,15 @@
                 <p><%= product.description %></p>
               </div>
           </div>
-           <div class="w-100"></div>
-    
-
-     
+           <div class="w-100 mb-5"></div>
       <% end %>
     </div>
+  </div>
+   
+  <div class="d-flex justify-content-center ">
+    <a href="https://line.me/R/ti/p/%40kuo1137i" class= "col-5 text-center btn-mb-w mx-4 px-4 er-link" target="_blank">線上預訂</a>
+  </div>
+
   </div>
 
   <!-- menu-quote -->

@@ -23,19 +23,19 @@
   
   <%= simple_form_for @contact do |f| %>
     <div class = "form-group">
-      <%= f.input :name, placeholder: "姓名 Input your name", class: "form-control" %>
+      <%= f.input :name, placeholder: "姓名 Input your name", error: '請填寫姓名', class: "form-control" %>
     </div>
 
     <div class = "form-group">
-      <%= f.input :phone, placeholder:"手機 Input your phone number", error: '您的手機號碼須為10個數字', class: "form-control" %>
+      <%= f.input :phone, placeholder:"手機 Input your phone number", error: '您的手機號碼須為10個數字', required: true, class: "form-control" %>
     </div>
 
     <div class = "form-group">
-    <%= f.input :email, placeholder:"電子信箱 Email", error:'您的email格式不正確', class: "form-control" %>
+    <%= f.input :email, placeholder:"電子信箱 Email", error:'您的email格式不正確', required: true, class: "form-control" %>
     </div>
 
     <div class = "form-group">
-    <%= f.input :message, placeholder:"留下你的建議 Write the messages", class: "form-control form-pb" %>
+    <%= f.input :message, placeholder:"留下你的建議 Write the messages", error: '請留下您的訊息', class: "form-control form-pb" %>
     </div>
 
     <div class ="btngroup">

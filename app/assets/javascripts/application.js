@@ -17,3 +17,17 @@
 //= require popper
 //= require bootstrap
 //= require ckeditor/init
+
+
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#notice_wrapper').fadeOut("slow", function(){
+      $(this).remove();
+    })
+  },3000);
+});
