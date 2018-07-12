@@ -1,0 +1,630 @@
+.clearfix{
+  clear:both;
+}
+
+
+h3{
+  letter-spacing: 2px;
+  text-transform: capitalize;  
+}
+
+a{
+  color: #000;
+}
+
+a, a:hover, a:focus{
+  text-decoration: none;
+}
+
+.link-n, .link-n:hover, .link-n:focus{
+ text-decoration: none;
+}
+
+.link-n{
+  color: #1C1B1A;
+}
+
+.link-n:hover{
+  color: rgba(28,27,26,0.7);
+}
+
+.overlay {
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-mb{
+  border: 1px solid #DB7B6B;
+  border-radius: 5px;
+  padding: 10px; 
+  color: #DB7B6B;
+  background-color: #F4F4F4;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-mb:hover, .btn-mb-w:hover, .btn-cart:hover{
+  background-color: #DB7B6B;
+  color: #fdfdfd;
+  transition: all, 0.4s, linear;
+  -webkit-transition: all .4s linear;
+  -moz-transition: all .4s linear;
+  -ms-transition: all .4s linear;
+  -o-transition: all .4s linear;
+
+}
+
+.er-link{
+  text-decoration: none;
+  color: #DB7B6B;
+}
+
+.er-link:hover{
+  text-decoration: none;
+  color: #fdfdfd;
+}
+
+.btn-mb-w{
+  border: 1px solid #DB7B6B;
+  border-radius: 5px;
+  padding: 8px 15px 8px 15px; 
+  color: #DB7B6B;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.btn-cart{
+  border: 1px solid #DB7B6B;
+  border-radius: 5px;
+  padding: 5px 50px; 
+  color: #DB7B6B;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 2px; 
+}
+
+.btn-cart:focus{
+  outline: none;
+}
+
+.btn-mb-w:hover, .btn-cart:hover{
+  text-decoration: none;
+  color: #fdfdfd;
+}
+
+.btn-b{
+  border-radius: 5px;
+  padding: 7px 30px; 
+  color: #FDFDFD;
+  background-color: rgba(28,27,26,0.8);
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.btn-b:hover{
+  background-color: #1C1B1A;
+  color: #fdfdfd;
+}
+
+.col-border, .box{
+  border: 1px solid #f1f1f2;
+  border-radius: 3px;
+  position: relative;
+}
+
+.display-n{
+  display:none;
+}
+
+.notice-bar{
+  margin-top: 50px;
+  z-index: 1000;
+}
+
+
+.mt100{
+  margin-top: 6rem;
+}
+
+/*============= 01.header =============*/
+
+
+.enav{
+  height: 50px;
+  z-index: 1030;
+}
+
+
+.ernav{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 1030;
+}
+
+.brand-logo img{
+  height: 40px;
+}
+
+.fixed-top{
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index: 1030;
+}
+
+nav .bar {
+  border: none;
+  padding: 0.35rem 0;
+}
+
+nav .bar i{
+  color: #fdfdfd;
+  border: none;
+  line-height:30px;
+}
+
+
+nav li a {
+  color: #fdfdfd !important;
+}
+
+nav li a:hover {
+  color: rgba(253,253,253,0.2) !important;
+}
+
+.dropdown-menu a:hover {
+  color: #fdfdfd !important;
+}
+
+
+/*============= 02.home =============*/
+
+.index-bulletin{
+  border: 1.5px solid #DB7B6B;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.index-bulletin p{
+  line-height: 20px;
+  margin-bottom: 2px;
+}
+
+
+.bulletin-inner{
+  padding: 5px;
+}
+
+.quote-bg{
+  position: relative;
+  margin-top: 40px;
+
+}
+
+.index-title{
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.index-span{
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -7px;
+  margin-left: -80px;
+  background-color: #fff;
+  width: 160px;
+  text-align: center;
+  line-height: 16px;
+}
+
+.gray-bg{
+  background-color: #F4F4F4;
+  width: 100%;
+  padding: 4%;
+}
+
+.reserve-inner{
+  line-height: 25px;
+  padding-bottom: 0.45rem;
+  letter-spacing: 0.5px;
+}
+
+/*============= 03.menu =============*/
+
+
+.w-inline{
+  display: inline-block;
+}
+
+.menu-img{
+  padding: 8px;
+}
+
+.menu-title{
+  line-height:13px;
+}
+
+.w-block{
+  display: block;
+}
+
+
+.menu-sec-title{
+ float:left; 
+}
+
+.menu-price{
+  float:right;
+}
+
+.pink-bg{
+  background-color: #DB7B6B;
+  border-radius: 5px;
+}
+
+.menu-info{
+  padding: 35px 0 20px 0;
+  margin-top: 35px;
+}
+
+.box:hover{
+  box-shadow:0 3px 5px rgba(28,27,26,0.3);
+}
+
+.menu-content p{
+  letter-spacing: 1px;
+  line-height: 23px;
+}
+
+
+/*============= 04.banner =============*/
+
+.quotes:before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.quotes{
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    top: calc(50% - 50px);
+    text-align: center;
+    z-index: 10;
+    width: auto;
+}
+
+.quotes-inner{
+  text-align: center;
+}
+
+.quotes-inner h5, .quotes-inner p {
+  text-align: center;
+  color: #FDFDFD;
+  letter-spacing: 2px;
+}
+
+.quotes-inner h3{
+  text-align: center;
+  color: #FDFDFD;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.top_bg{
+  position: relative;
+  margin-top :3rem;
+}
+
+.toptitle:before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.toptitle{
+  position: absolute;
+  right: 15%;
+  left: 15%;
+  top: calc(50% - 10px);
+  text-align: center;
+  z-index: 10;
+  width: auto;
+}
+
+.toptitle-c{
+  position: absolute;
+  right: 15%;
+  left: 15%;
+  top: calc(50% - 30px);
+  text-align: center;
+  z-index: 10;
+  width: auto;
+}
+
+.menu-toptitle{
+  position: absolute;
+  right: 15%;
+  left: 15%;
+  top: calc(70% - 10px);
+  text-align: center;
+  z-index: 10;
+  width: auto;
+}
+
+.border-w{
+  border: 1px solid #fdfdfd;
+  text-align: center;
+  color: #fdfdfd;
+  padding: 5px 8px 5px 8px;
+  display: inline-block;
+}
+
+/*============= 05.about =============*/
+
+#about_us h4{
+  letter-spacing: 2px;
+}
+
+.gray-bg p{
+  line-height: 30px;
+  padding: 5px;
+}
+
+/*============= 05.contact =============*/
+
+.delivery-img{
+  padding:10px;
+  margin: 10px;
+}
+
+.contact-title li{
+  list-style: none;
+  padding: 0 1rem 0 1rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.front-title{
+  border-right: 1.5px solid rgba(28,27,26,0.5);
+}
+
+.gray-text{
+  text-decoration: none;
+  color: rgba(28,27,26,0.5);
+}
+
+.gray-text:hover {
+  text-decoration: none;
+  color: #1C1B1A;
+}
+
+.er-form{
+  border: none;
+  }
+
+.form-content input{
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #333;
+  margin-bottom: 2rem;
+}
+
+.form-pb{
+  padding-bottom: 10rem;
+}
+
+.notice li a{
+  color: #1C1B1A;
+}
+
+.notice li a:hover{
+  text-decoration: none;
+  color: #DB7B6B;
+}
+
+
+/*============= 06.bulletin =============*/
+
+.page-item{
+  margin-right: 10px;
+}
+
+.page-link{
+  color: #1C1B1A !important; 
+  border-radius: 6px !important;
+  font-size: 0.85rem;
+}
+
+.page-link:hover {
+  color: #1C1B1A !important; 
+}
+
+
+.er-font-12{
+  font-size: 12px;
+}
+
+.er-font-16{
+  font-size: 16px;
+}
+
+.er-font-18{
+  font-size: 18px;
+}
+
+.er-font-20{
+  font-size: 20px;
+}
+
+.gray-color{
+  color: rgba(28,27,26,0.75);
+}
+
+/*============= 07.blog =============*/
+
+.blog-social-icon i{
+  padding: 0 6px;
+}
+
+.fb-color{
+  color: #3b5998;
+}
+
+.line-color{
+  color: #00c300;
+}
+
+/*============= 09.footer =============*/
+
+.footer{
+  margin-top: 4rem;
+}
+
+.footer-content{
+  position: relative;
+}
+
+.footer p{
+  color: #fdfdfd;
+  line-height: 20px;
+  padding: 0px;
+}
+
+.footer-icon i{
+  color: #fdfdfd;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.footer-icon i:hover, .footer-social-icon i:hover{
+  color: rgba(253,253,253,0.65);
+}
+
+.footer-social-icon i{
+  color: #fdfdfd;
+  cursor: pointer;
+  margin: 0 0.8rem 0 0.8rem;
+}
+
+.footer hr {
+  color: #fdfdfd;
+}
+
+.footer-col a{
+  color: #fdfdfd;
+}
+
+.footer-col a:hover{
+  color: rgba(253,253,253,0.8);
+  text-decoration: none;
+}
+
+.copyright {
+  border-top: 1px solid #fdfdfd;
+  margin-top: 10px;
+  padding: 9px;
+}
+
+.copyright p{
+  line-height: 14px;
+}
+
+#myBtn {
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: none; /* Set a background color */
+    color: #fdfdfd; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    margin: 0 0.85rem 0 0.85rem;
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/*============= 08.Alert bar =============*/
+
+#notice_wrapper{
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 50px;
+  z-index: 1111;
+  background: rgba(135, 216, 211, 0.9);
+}
+
+.alert, .notice{
+  padding: 1rem 0;
+  text-align: center;
+  margin: 0;
+  color: #fdfdfd;
+  letter-spacing: 1px;
+}
+
+/*============= 10.Cart =============*/
+
+.cart{
+  position: relative;
+}
+
+.cart-icon:hover{
+  cursor: pointer;
+}
+
+.cart-quantity{
+  background-color: #DB7B6B;
+  color: #fdfdfd;
+  position: absolute;
+  border-radius: 999em;
+  top: 8px;
+  right: -9px;
+  display: inline-block;
+  padding: .35em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.svg:hover{
+  color: #DB7B6B;
+}
+
+.form-text{
+  color: rgba(28,27,26,0.8);
+  line-height: 16px;
+  font-size: 14px;
+}
+
+.my-sign-in{
+  border-right: 1px dotted #1C1B1A;
+}
+
+.step{
+  padding: 0 1.5rem ;
+}
+
+.active{
+  color: #DB7B6B;
+}

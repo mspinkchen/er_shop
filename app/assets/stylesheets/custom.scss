@@ -1,0 +1,57 @@
+$danger: #D0021B;
+
+$link-color: #1C1B1A;
+$link-hover-color: #DB7B6B;
+$link-hover-decoration: none;
+
+$theme-colors: (
+"primary": #0074d9,
+"info": #52D4E5,
+"custom-color": #900 
+); 
+
+$body-bg: #fdfdfd;
+
+$font-family-sans-serif:
+// Safari for OS X and iOS (San Francisco)
+-apple-system,
+// Chrome < 56 for OS X (San Francisco)
+BlinkMacSystemFont,
+// Windows
+"Microsoft JhengHei", "Segoe UI",
+// Android
+"Roboto",
+// Basic web fallback
+"Helvetica Neue", Arial, sans-serif,
+// Emoji fonts
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ 
+$input-btn-focus-width: 0px;
+$input-btn-focus-color: none;
+$input-btn-focus-box-shadow:  #1C1B1A;
+$input-btn-focus-color: none;
+$input-focus-border-color: #1C1B1A;
+
+
+$btn-focus-width: 0px;
+$btn-focus-box-shadow: 0px;
+
+$dropdown-link-color: #fdfdfd;
+$dropdown-link-hover-color: #fdfdfd;
+$dropdown-link-hover-bg: rgba(253,253,253,0.2);
+
+$dark: #1C1B1A;
+
+
+$pagination-disabled-bg: #DB7B6B;
+$pagination-active-bg: #DB7B6B;
+$pagination-disabled-border-color: #DB7B6B;
+$pagination-active-border-color: #DB7B6B;
+
+$nav-link-padding-x: 0.35rem;
+
+$nav-divider-color: none;
+$nav-tabs-link-hover-border-color: none;
+$nav-tabs-link-active-bg: none;
+$nav-tabs-link-active-color: #DB7B6B;
+$nav-tabs-link-active-border-color: #fdfdfd #fdfdfd #DB7B6B #fdfdfd;

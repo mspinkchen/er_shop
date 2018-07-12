@@ -1,0 +1,180 @@
+
+abbr[title] {
+  text-decoration: none;
+}
+
+// apply primary button style to buttons with only `btn` class
+[class="btn"] {
+  @extend .btn-primary;
+}
+
+// vertical form
+.form-check {
+  > .collection_check_boxes,
+  > .collection_radio_buttons {
+    @extend .form-check-label;
+    // fix missing space between input & label
+    margin-right: .265625rem;
+  }
+}
+
+// custom form
+.custom-control {
+  > .collection_check_boxes,
+  > .collection_radio_buttons {
+    @extend .custom-control-label;
+    // fix missing space between input & label
+    margin-right: .265625rem;
+  }
+}
+
+// custom form radio button fix
+.form-group.radio_buttons {
+  > .custom-control {
+    @extend .custom-radio;
+  }
+}
+
+// custom form check box fix
+.form-group.check_boxes {
+  > .custom-control {
+    @extend .custom-checkbox;
+  }
+}
+
+// credits: http://wingman.mediumra.re/components-bootstrap.html#forms
+.custom-control.custom-checkbox-switch {
+  padding-left: 0;
+
+  label {
+    display: flex;
+
+    &:before {
+      top: 0;
+      left: 0;
+      position: relative;
+      border-radius: $spacer !important;
+      width: $spacer * 2;
+      height: $spacer;
+      transition: background-color .2s ease;
+      display: inline-block;
+      margin-right: $spacer / 2;
+      align-self: center;
+    }
+
+    &:after {
+      content: '';
+      transition: left .2s ease;
+      position: absolute;
+      transform: scale(0.7);
+      height: $spacer;
+      width: $spacer;
+      border-radius: 50%;
+      left: 0;
+      background: $white;
+    }
+  }
+
+  input:checked {
+    + label {
+      background-image: none !important;
+
+      &:after {
+        left: $spacer;
+      }
+    }
+  }
+}
+
+// extracted from:
+// http://getbootstrap.com/docs/4.0/examples/floating-labels/
+
+$sf-floating-input-padding-x: $input-padding-x !default;
+$sf-floating-input-padding-y: $input-padding-y * 2 !default;
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > select,
+.form-label-group > label {
+  padding: $sf-floating-input-padding-y $sf-floating-input-padding-x;
+}
+
+.form-label-group {
+  > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+    user-select: none;
+  }
+
+  select,
+  input {
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:not(:placeholder-shown) {
+      padding-top: $sf-floating-input-padding-y + $sf-floating-input-padding-y * (2 / 3);
+      padding-bottom: $sf-floating-input-padding-y / 3;
+
+      ~ label {
+        padding-top: $sf-floating-input-padding-y / 3;
+        padding-bottom: $sf-floating-input-padding-y / 3;
+        font-size: 12px;
+        color: #777;
+      }
+    }
+  }
+
+  .custom-select,
+  select.form-control {
+    font-size: inherit;
+    padding-bottom: 2px;
+
+    ~ label {
+      width: auto;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  select[multiple] {
+    ~ label {
+      background-color: $input-bg;
+      padding: 0 0 0 $sf-floating-input-padding-x;
+      margin-top: $input-border-width;
+      margin-left: $input-border-width * 2;
+      width: 99%;
+    }
+  }
+}
+
+.custom-select,
+.form-control {
+  &.date,
+  &.datetime,
+  &.time {
+    &:first-of-type { margin-left: 0 !important; }
+    &:last-of-type { margin-right: 0 !important; }
+  }
+}
+
+.custom-select {
+  &[multiple],
+  &:only-child {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
