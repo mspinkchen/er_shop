@@ -44,22 +44,9 @@
           </li>
 
           <li>
-          <div class="dropdown show">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">會員登入</a>
-
-            <div class="dropdown-menu bg-dark border-0" aria-labelledby="dropdownMenuLink2">
-            <% if current_user %>
-              <% if current_user&.admin? %>
-                <%= link_to 'Admin Panel', admin_root_path, class: "dropdown-item" %>
+            <% if current_user&.admin? %>
+              <%= link_to 'Admin Panel', admin_root_path %>
               <% end %>
-              <%= link_to'登出', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-              <%= link_to'修改個人資料', edit_user_registration_path(current_user), class: "dropdown-item" %>
-              <% else %>
-              <%= link_to'註冊', new_user_registration_path, class: "dropdown-item" %>
-              <%= link_to'登入', new_user_session_path, class: "dropdown-item" %>
-            <% end %>
-            </div>
-          </div>
           </li>
 
           
@@ -102,22 +89,11 @@
           </li>
           <!-- 會員資訊 -->
           <li>
-          <div class="dropdown show">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">會員登入</a>
-
-            <div class="dropdown-menu bg-dark border-0" aria-labelledby="dropdownMenuLink2">
-            <% if current_user %>
-              <% if current_user&.admin? %>
-                <%= link_to 'Admin Panel', admin_root_path, class: "dropdown-item" %>
-              <% end %>
-              <%= link_to'登出', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-              <%= link_to'修改個人資料', edit_user_registration_path(current_user), class: "dropdown-item" %>
-              <% else %>
-              <%= link_to'註冊', new_user_registration_path, class: "dropdown-item" %>
-              <%= link_to'登入', new_user_session_path, class: "dropdown-item" %>
+   
+            <% if current_user&.admin? %>
+              <%= link_to 'Admin Panel', admin_root_path %>
             <% end %>
-            </div>
-          </div>
+
           </li>
 
         <div class="footer-social-icon mt-5 mb-3 p-2 d-block d-md-none">
