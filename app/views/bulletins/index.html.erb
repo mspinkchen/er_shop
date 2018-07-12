@@ -1,0 +1,53 @@
+  <div class="contact-bg top_bg">
+    <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/topbanner-3-lg.jpg" alt="玩飯餐盒" class="img-fluid d-none d-md-block">
+    <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/topbanner-3-sm.jpg" alt="玩飯餐盒" class="img-fluid d-block d-md-none">
+    <div class="overlay"></div>
+    <div class="toptitle-c">
+      <div class="quotes-inner">
+        <h3 class="mb-1">news</h3>
+      </div>
+    </div>
+  </div>
+
+    <div class="row contact-toptitle mt-4">
+    <ol class="contact-title col-12 d-flex justify-content-center pr-md-3 pr-0">
+      <li>最新消息</li>
+ 
+    </ol>
+  </div>
+
+  <!-- bulltins -->
+  <div class="container">
+    
+    <div class="bulletin pt-5"> 
+        <div class="row">
+          <% @bulletins.each do |bulletin| %> 
+          <div class="col-12 col-sm-6 col-lg-4 mb-5">
+            <div class="col-border p-2">
+              <div class="bulletin-img">
+                <% if bulletin.picture.present? %>
+                  <%= image_tag(bulletin.picture.url, class: "img-fluid") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/300x200&text=No Pic", class: "img-fluid") %>
+                <% end %>
+              </div>
+            <div class="bulletin-content my-3">
+              <div class="er-font-18"><%= bulletin.title %></div>
+                <div class="er-font-12 gray-color"><%= bulletin.created_at.strftime("%Y-%m-%d") %></div>
+              <div class="er-font-16 mt-1"><%= bulletin.body.html_safe %></div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div>
+      <div class=" er-pagination d-flex justify-content-center mt-4">
+        <%= paginate @bulletins %>
+      </div>
+    </div>
+     
+  </div>
+

@@ -1,0 +1,8 @@
+    <section id="bulletin">
+    <div class="bulletin-inner">
+      <% @bulletins.each do |bulletin| %>
+      <h5><span><i class="fas fa-bullhorn"></i> <%= bulletin.title %></h5>
+      <p><%= bulletin.body.html_safe %></p>
+      <% end %>
+    </div>   
+  </section>
