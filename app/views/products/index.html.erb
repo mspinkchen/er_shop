@@ -1,0 +1,76 @@
+  <div class="menu-bg top_bg">
+    <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/topbanner-1-lg.jpg" alt="玩飯餐盒" class="img-fluid d-none d-md-block">
+    <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/topbanner-1-sm.jpg" alt="玩飯餐盒" class="img-fluid d-block d-md-none">
+    <div class="overlay"></div>
+    <div class="menu-toptitle">
+      <div class="quotes-inner">
+        <h5 class="border-w">手作原味餐盒</h5>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="container">
+    <div class="index-title my-5">
+      <hr><span class="index-span">會議餐盒</span>
+    </div>
+
+  <!-- menu column --> 
+  <div class="menu-col">
+        <div class="row justify-content-center">  
+      <% @products.each do |product| %>  
+             
+        <div class="col-5">
+          <div class="box px-0 mb-5">
+            <div class="menu-img">
+              <% if product.photos.present? %>
+                <%= image_tag(product.photos[0].avatar.url, class: "img-fluid") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/300x200&text=No Pic", class: "img-fluid") %>
+              <% end %>
+            </div>
+   
+            <div class="menu-content text-center">
+               <p class="er-font-18 menu-title mt-2 mb-1"><%= product.name %></p>
+            </div>
+          </div>
+        </div>   
+      
+          <div class="col">
+            <div class="mt-2 menu-page-right">
+              <div class="menu-page-top">
+                <h3 class="d-inline mr-2"><%= product.name %></h3>
+                <div class="er-font-14 d-inline px-1 pink-bg"><%= product.flavor %></div>
+                <div class="er-font-14"><%= product.en_name %></div>
+                <div class="er-font-14">$<%= product.price %></div>
+              </div>
+            </div>
+              
+            <hr>
+              <div class="menu-content">
+                <p><%= product.description %></p>
+              </div>
+          </div>
+           <div class="w-100"></div>
+    
+
+     
+      <% end %>
+    </div>
+  </div>
+
+  <!-- menu-quote -->
+  <div class="menu-quote mb-5">
+    <div class="quote-bg">
+        <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/topbanner-6-lg.jpg" alt="玩飯餐盒" class="img-fluid d-none d-md-block">
+        <img src="https://s3-ap-northeast-1.amazonaws.com/www.enjoyrice.com/banner/topbanner-6-sm.jpg" alt="玩飯餐盒" class="img-fluid d-block d-md-none">
+      <div class="overlay"></div>
+      <div class="quotes">
+        <div class="quotes-inner">
+          <h5 class="font-weight-light">Bon appetit</h5>
+          <p class="font-weight-light">享受美食，不需要理由</p>
+        </div>
+      </div>
+    </div>
+  </div>
