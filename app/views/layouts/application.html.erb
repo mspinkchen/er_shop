@@ -9,6 +9,24 @@
   </head>
 
   <body>
+    <!-- header -->
+    <header>
+      <%= render partial: "layouts/navbar" %>
+    </header>
+
+    
+    <!-- Notice bar -->   
+    <% if flash[:notice] %>
+      <div id="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% elsif flash[:alert] %>
+      <div id="notice_wrapper">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+   
+
     <%= yield %>
   </body>
 </html>

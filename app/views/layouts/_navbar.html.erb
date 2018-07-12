@@ -1,0 +1,134 @@
+<div class="enav fixed-top navbar-dark bg-dark">
+  <div class="container">
+    <nav class="d-flex justify-content-md-start justify-content-between mx-2">
+      <div class="order-2 order-md-1">
+          <div class="navbar-brand">
+            <%= link_to root_path do %>
+              <div class="brand-logo d-block d-md-none">
+                 <img src="<%= image_path('logo.png') %>" alt="App Logo"  >
+              </div>
+              <div class="brand-logo d-none d-md-block">
+                 <img src="<%= image_path('logo.png') %>" alt="App Logo"  >
+              </div>
+            <% end %>
+          </div>
+      </div>
+      <div class="order-1 order-md-2 d-md-none bar">
+        <div class="bar navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i></div>
+      </div>
+
+      <div class="order-1 order-md-2 mr-md-auto d-none d-md-block">
+        <ul class="navbar list-unstyled">
+          <li class="nav-item">
+            <%= link_to '關於我們', abouts_path,class: "nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to '玩飯美味', products_path,class: "nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to '玩飯快訊', bulletins_path,class: "nav-link" %>
+          </li>
+
+          <li>
+          <div class="dropdown show">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">服務資訊</a>
+
+          <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
+          <%= link_to '外送範圍', contacts_delivery_path, class: "dropdown-item" %>
+          <%= link_to '聯絡我們', contacts_path, class: "dropdown-item" %>
+          </div>
+        </div>
+          </li>
+
+          <li>
+          <div class="dropdown show">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">會員登入</a>
+
+            <div class="dropdown-menu bg-dark border-0" aria-labelledby="dropdownMenuLink2">
+            <% if current_user %>
+              <% if current_user&.admin? %>
+                <%= link_to 'Admin Panel', admin_root_path, class: "dropdown-item" %>
+              <% end %>
+              <%= link_to'登出', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to'修改個人資料', edit_user_registration_path(current_user), class: "dropdown-item" %>
+              <% else %>
+              <%= link_to'註冊', new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to'登入', new_user_session_path, class: "dropdown-item" %>
+            <% end %>
+            </div>
+          </div>
+          </li>
+
+          
+        </ul>
+      </div>
+      <div class="order-3 order-md-3 cart mr-2">
+        <div class="cart-icon">
+        <%= render partial: "layouts/icon" %> 
+        </div>    
+      </div>
+    </nav>     
+  </div>
+</div>
+
+<!-- mobile -->
+
+    <nav class="ernav collapse navbar-collapse bg-dark mt-5 " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-3 list-unstyled">
+          <li class="nav-item">
+            <%= link_to '關於我們', abouts_path,class: "nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to '玩飯美味', products_path,class: "nav-link" %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to '玩飯快訊', bulletins_path,class: "nav-link" %>
+          </li>
+
+          <li>
+          <div class="dropdown show">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">服務資訊</a>
+
+            <div class="dropdown-menu bg-dark border-0" aria-labelledby="dropdownMenuLink">
+              <%= link_to '外送範圍', contacts_delivery_path, class: "dropdown-item " %>
+              <%= link_to '聯絡我們', contacts_path, class: "dropdown-item" %>
+            </div>
+          </div>
+          </li>
+          <!-- 會員資訊 -->
+          <li>
+          <div class="dropdown show">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">會員登入</a>
+
+            <div class="dropdown-menu bg-dark border-0" aria-labelledby="dropdownMenuLink2">
+            <% if current_user %>
+              <% if current_user&.admin? %>
+                <%= link_to 'Admin Panel', admin_root_path, class: "dropdown-item" %>
+              <% end %>
+              <%= link_to'登出', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to'修改個人資料', edit_user_registration_path(current_user), class: "dropdown-item" %>
+              <% else %>
+              <%= link_to'註冊', new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to'登入', new_user_session_path, class: "dropdown-item" %>
+            <% end %>
+            </div>
+          </div>
+          </li>
+
+        <div class="footer-social-icon mt-5 mb-3 p-2 d-block d-md-none">
+          <a href="https://www.facebook.com/enjoyrice/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
+          <a href="https://www.instagram.com/enjoyrice.tw/" target="_blank"><i class="fab fa-line fa-lg"></i></a>
+          <a href="https://line.me/R/ti/p/%40kuo1137i" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+
+      </nav>
+
+
+
+
+
