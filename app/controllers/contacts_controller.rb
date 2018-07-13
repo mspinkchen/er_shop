@@ -10,6 +10,8 @@ class ContactsController < ApplicationController
     if @contact.save
       flash[:notice] = "Message was successfully created 訊息傳送成功"
       redirect_to contacts_path
+      UserMailer.notify_contact_create(@contact).deliver_now!
+
     else
       flash.now[:alert] = "Message was failed created 請重新檢查欄位"
       render :index
