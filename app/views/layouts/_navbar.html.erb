@@ -46,6 +46,8 @@
           <li>
             <% if current_user&.admin? %>
               <%= link_to 'Admin Panel', admin_root_path %>
+              <%= link_to'登出', destroy_user_session_path, method: :delete %>
+
               <% end %>
           </li>
         </ul>
