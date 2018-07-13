@@ -17,6 +17,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+*.tmp
 
 /node_modules
 /yarn-error.log
@@ -88,3 +89,4 @@ xerial*.*
 /public/uploads
 /config/facebook.yml
 /config/email.yml
+/config/initializers/carrierwave
