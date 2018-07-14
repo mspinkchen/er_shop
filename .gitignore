@@ -38,6 +38,7 @@
 /coverage/
 /db/*.javadb/
 /db/*.sqlite3
+/db/*.rb
 /doc/api/
 /doc/app/
 /doc/features.html
@@ -89,4 +90,4 @@ xerial*.*
 /public/uploads
 /config/facebook.yml
 /config/email.yml
-/config/initializers/carrierwave
+/config/*.rb
