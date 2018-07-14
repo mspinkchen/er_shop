@@ -15,4 +15,8 @@ class HomeController < ApplicationController
 
   def delivery
   end
+
+  def questions
+  end
+  
 end

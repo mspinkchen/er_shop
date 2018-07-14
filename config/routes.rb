@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root "home#index"
   get "/home/about" => "home#about"
   get "/home/delivery" => "home#delivery"
+  get "/home/questions" => "home#questions"
   
 
   resources :products, only: [:index, :show] 
