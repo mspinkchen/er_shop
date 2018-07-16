@@ -91,3 +91,4 @@ xerial*.*
 /config/facebook.yml
 /config/email.yml
 /config/*.rb
+/config/initializers/carrierwave
